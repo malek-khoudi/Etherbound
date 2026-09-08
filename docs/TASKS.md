@@ -13,30 +13,43 @@ Release the claim when you finish.
 
 ---
 
+## Decision log
+
+- **2026-09-08 LOCKED.** BG3-shaped narrative tactical RPG. Godot 4, stylized low-poly 3D,
+  real-time exploration + turn-based incident mode, three-character party.
+  Non-goals are listed in `AGENTS.md` section 1 and are decisions, not deferrals.
+
+---
+
 ## Now
 
-- [ ] Malek: create GitHub repo `malek-khoudi/Etherbound`, private, no README, no .gitignore, no license
-- [ ] Malek: install Godot 4 standard on the PC and the Mac
-- [ ] Malek: install Git LFS on the PC (`git lfs install`) before first clone
-- [ ] Malek: verify `docs/CANON.md` seed against the Notion corpus, resolve the two `[NEEDS AUTHOR]` items
-- [ ] Malek: name and define the three slice-1 playable characters
-- [ ] Claude: scaffold the Godot project, turn loop, grid, three units
-- [ ] Claude: reserve/throughput as an enforced resource
-- [ ] Claude: one Kinetic ability with visible anchor preview
-- [ ] Claude: one environmental interaction
+- [x] Repo created and pushed
+- [x] Git LFS installed on the Mac
+- [ ] Malek: install Godot 4 standard, Blender, Krita on the **PC**, plus Git + Git LFS
+- [ ] Malek: report PC RAM
+- [ ] Malek: verify `docs/CANON.md` seed against the Notion corpus
+- [ ] Malek: resolve the two `[NEEDS AUTHOR]` continuity items (Bren's Somatic Sense; Developing-vs-locked properties)
+- [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
+- [ ] Claude: Godot project scaffold, folder structure, project settings
+- [ ] Claude: third-person orbital exploration controller
+- [ ] Claude: incident-mode trigger and turn loop
+- [ ] Claude: reserve and throughput as an enforced resource, not a display
+- [ ] Claude: one Kinetic ability with visible anchor preview and a readable failure reason
+- [ ] Claude: one environmental interaction (structural connection graph, minimal)
 - [ ] Claude: save/load
 
 ## Next
 
-- [ ] Dialogue system with explicit state
+- [ ] Dialogue system with explicit state and NPC knowledge tracking
+- [ ] Investigation layer: evidence objects, conflicting accounts, reporting choice
 - [ ] The rescue encounter
-- [ ] Post-incident evidence and reporting choice
 - [ ] Aftermath scene showing material consequence
 
 ## Blocked
 
-- Everything narrative is blocked on the CANON.md verification and slice-1 character definitions.
+- All narrative content is blocked on the CANON.md verification and the slice-1 character definitions.
 
 ## Done
 
 - [x] Repo scaffold, LFS config, agent brief (2026-09-08)
+- [x] Route decision locked, non-goals written (2026-09-08)

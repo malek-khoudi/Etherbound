@@ -11,14 +11,42 @@ Last updated: 2026-09-08
 
 A game adaptation of the **Etherbound** novel series by Malek Khoudi.
 
-**Chosen route:** single-player **narrative tactical RPG** in **Godot 4** (standard build, GDScript).
-Compact locations, small party, consequential investigation, environmental problem-solving.
+**Shorthand:** BG3-style presentation and exploration, with a much smaller handcrafted scope
+and a far more physics- and system-driven tactical layer.
+
+**Chosen route (locked 2026-09-08):** single-player **narrative tactical RPG** in **Godot 4**
+(standard build, GDScript), rendered in **stylized low-poly 3D**.
+
+**Shape:**
+
+- **Real-time 3D exploration** of compact handcrafted locations. Not open world. Not enormous acts.
+- **Turn-based incident mode** for emergencies and combat. Exploration is not turn-based.
+- **Three active party members.** Not a large roster.
+- **Systemic environmental problem-solving** is the core loop: collapses, rescues, machinery,
+  heat, structures, evidence, containment. Combat is one case of it, not the point of it.
+- **Abilities obey their physical rules**, never "does X damage in radius Y". A Kinetic push
+  needs an anchor that can fail. Thermic cooling needs a sink. See section 3.
+- **Investigation and knowledge layer is central.** Who knows what, what can be inferred,
+  what gets reported, and where an explanation exceeds its evidence are playable decisions.
+- **Cinematic presentation** for dialogue and consequence beats, within a small-scope budget.
 
 **Current milestone:** build ONE complete playable incident (30 to 60 minutes of finished play)
 before committing to a campaign. Nothing beyond that milestone is approved scope.
 
-The 3D action route is explicitly deferred. Do not scaffold Unity or Unreal projects.
-Do not add 3D animation systems, character rigs, or third-person camera controllers.
+### Explicit non-goals
+
+These are not deferred features. They are decisions, and reversing one needs Malek's word.
+
+- **No action combat.** No combo chains, no cancels, no input buffering, no i-frames,
+  no dodge-roll timing windows, no over-the-shoulder combat camera.
+- **No Unity, no Unreal.** Do not scaffold either. Godot 4 only.
+- **No open world, no large maps.** Compact, handcrafted, dense.
+- **No live AI dialogue and no runtime AI API.** Dialogue is authored, state is explicit.
+- **No networking, no console targets, no store integration.** Desktop, single-player, local.
+
+3D is in scope, but tactical 3D, not action 3D. The camera is orbital and player-controlled.
+Character animation sets are small (roughly 15 per character) and augmented procedurally
+with IK, look-at and torso aim rather than expanded with bespoke clips.
 
 ---
 
@@ -75,7 +103,8 @@ The novels are the authority. The game bends to them, never the reverse.
 ```
 game/     Godot project (project.godot lives here)
 docs/     CANON.md, ADAPTATION.md, TASKS.md, design notes
-art/      concept/ portraits/ tilesets/ ui/   (LFS tracked)
+art/      concept/ portraits/ ui/            (LFS tracked)
+          models/characters/ models/props/ models/kit/   (LFS tracked)
 audio/    music and sfx                        (LFS tracked)
 tools/    scripts, generators, pipeline helpers
 ```
@@ -91,6 +120,12 @@ before your first clone or you will commit broken pointer files.
 - **Windows PC, RTX 4070 Super 12 GB, Ryzen 5 2600X.** Engine work, running builds, Blender, local image generation.
 
 The 2600X is a 2018 CPU and is the bottleneck. This is one reason the project is Godot and not Unreal.
+
+**Required toolchain, both machines:** Godot 4.x standard, Blender, Krita, Git + Git LFS.
+Blender is required, not optional, because the game is 3D.
+Free asset sources used deliberately to avoid modelling from scratch: Mixamo (rigged humanoids
+and base animation clips), Quaternius and Kenney (low-poly models and kits), Poly Haven
+(HDRIs and textures). Check licences before shipping anything.
 
 ---
 
