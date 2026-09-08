@@ -9,7 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| (none) | | | |
+| Codex | `codex/playable-bay` | `docs/TASKS.md`, `docs/handoff/codex-01-notes.md`, `game/scenes/**`, `game/ui/**`, `game/main.gd`, `game/project.godot` | 2026-09-08 |
 
 ---
 
