@@ -32,7 +32,7 @@ Release the claim when you finish.
 - [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
 - [x] Claude: Godot project scaffold, folder structure, project settings
 - [ ] Claude: third-person orbital exploration controller
-- [ ] Claude: incident-mode trigger and turn loop
+- [x] Claude: incident-mode turn loop (82 assertions across 3 suites, all passing)
 - [x] Claude: reserve and throughput as an enforced resource, not a display (25 assertions, all passing)
 - [ ] Claude: one Kinetic ability with visible anchor preview and a readable failure reason
 - [x] Claude: structural connection graph (32 assertions, all passing)
@@ -56,5 +56,6 @@ Release the claim when you finish.
 - [x] Party decided: Kinetic / Gravitic / Transmutative, all Etherbound (2026-09-08)
 - [x] Godot project + reserve/throughput core + headless test suite (2026-09-08)
 - [x] Structural connection graph + tools/test.sh runner (2026-09-08)
+- [x] Incident turn loop. The slice-1 rescue proven end to end (2026-09-08)
 
 Run the suites: `./tools/test.sh`

@@ -76,6 +76,9 @@ class Connection extends RefCounted:
 var _members: Dictionary = {}
 var _connections: Array[Connection] = []
 var _last_error: String = ""
+## Load being carried by something outside the structure: an Etherbound holding
+## it up, a worker's prop, a jack. Subtracted before load flows onward.
+var _external: Dictionary = {}
 
 
 # --- authoring -----------------------------------------------------------
@@ -175,6 +178,11 @@ func solve() -> bool:
 	while not queue.is_empty():
 		var id: StringName = queue.pop_front()
 		processed += 1
+		# Whatever is holding this member up does not flow onward. Relief shows
+		# in the member's own stress too: a beam being carried is less loaded.
+		var relief: float = _external.get(id, 0.0)
+		_members[id].load = maxf(_members[id].load - relief, 0.0)
+
 		var carriers: Array[StringName] = supports_of(id)
 		if not carriers.is_empty():
 			var share: float = _members[id].load / float(carriers.size())
@@ -297,6 +305,32 @@ func reinforce(from_id: StringName, to_id: StringName, added_capacity: float) ->
 	solve()
 	return true
 
+## Something outside the structure takes part of the load: an Etherbound holding
+## the beam, a worker's prop, a jack. Additive, so several units can share one member.
+func add_external_support(id: StringName, amount: float) -> void:
+	_external[id] = _external.get(id, 0.0) + amount
+	solve()
+
+func remove_external_support(id: StringName, amount: float) -> void:
+	_external[id] = maxf(_external.get(id, 0.0) - amount, 0.0)
+	solve()
+
+func external_support(id: StringName) -> float:
+	return _external.get(id, 0.0)
+
+## Everything currently over capacity, by player-facing name. Empty means the
+## structure is standing. Non-empty means it is coming down this round.
+func overloaded() -> Array[String]:
+	var out: Array[String] = []
+	for id in _members:
+		var m: Member = _members[id]
+		if m.utilisation() > 1.0:
+			out.append(m.label)
+	for c in _connections:
+		if not c.severed and c.utilisation() > 1.0 and _members.has(c.from_id):
+			out.append("%s under %s" % [c.label(), _members[c.from_id].label])
+	return out
+
 ## Gravitic. Alters acceleration over a set of members, never their mass.
 func set_gravity_factor(ids: Array, factor: float) -> void:
 	for id in ids:
@@ -314,4 +348,6 @@ func _clone() -> Structure:
 	for c in _connections:
 		var cc := s.connect_members(c.from_id, c.to_id, c.capacity, c.kind)
 		cc.severed = c.severed
+	for id in _external:
+		s._external[id] = _external[id]
 	return s

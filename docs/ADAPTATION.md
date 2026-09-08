@@ -27,6 +27,9 @@ If the player cannot predict it, the game must say so before they commit.
 | Structural connection graph | Kinetic anchors, Transmutative fronts, load paths | Simplified model of real canon physics. |
 | Thermal reservoir model | Thermic needs a sink | Simplified model of real canon physics. |
 | Tactical overlay UI | Shows anchors, load paths, sightlines | Optional UI. NOT visible in-world. See CANON.md visual rules. |
+| `SECONDS_PER_ROUND = 6.0` | Converts a per-second reserve drain into a per-round one | Not canon. Tuned so a full-throughput hold lasts a handful of rounds, not one and not thirty. |
+| Fixed turn order, no initiative | Predictability over simulation | Not canon. |
+| External support as a scalar | An Etherbound or a prop taking load off a member | Simplified model of a real canon act. |
 
 ---
 
