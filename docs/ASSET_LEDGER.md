@@ -1,0 +1,86 @@
+# Etherbound asset and licence ledger
+
+Every binary entering the project is recorded here before it is treated as production-ready.
+Unknown provenance means the asset does not ship.
+
+Last updated: 2026-09-09
+
+## Directory contract
+
+| Path | Purpose |
+|---|---|
+| `art/concept/` | User-supplied visual references. Never treated as canon by image text alone. |
+| `art/models/characters/` | Editable Blender character and rig sources. Git LFS. |
+| `art/models/kit/` | Editable Blender environment/prop sources. Git LFS. |
+| `game/assets/models/characters/` | Godot-ready GLB character/animation exports. Git LFS. |
+| `game/assets/models/environment/` | Godot-ready GLB environment exports. Git LFS. |
+| `game/assets/materials/` | Godot material resources and approved texture outputs. |
+| `tools/blender/` | Repeatable Blender Python builders and exporters. |
+
+The checked-in `.blend` file is the editable source. The checked-in `.glb` file is the
+portable runtime interchange. Godot scenes add engine lighting, navigation, collision,
+interaction state and gameplay; Blender files do not contain game logic.
+
+## Current ledger
+
+| Asset/group | Source | Licence/provenance | Intended use | Status |
+|---|---|---|---|---|
+| Concept collection in `art/concept/` | Supplied by Malek | Internal reference; individual generation/source details not yet recorded | Palette, silhouette and atmosphere reference only | Reference only |
+| `pipeline_environment.blend` / `.glb` | Procedurally authored for this repo through Blender Python | Project-authored | Junction 3 environment import proof | Planned |
+| `pipeline_character.blend` / `.glb` | Procedurally authored for this repo through Blender Python | Project-authored | Junction 3 rig, material and animation proof | Planned |
+| Mixamo humanoid animations | Adobe Mixamo | Adobe states characters and animations may be used royalty-free in video games; preserve downloaded originals and record clip names | Candidate production locomotion/gesture source | Not downloaded |
+| Poly Haven textures/HDRIs/models | Poly Haven | CC0; record each asset URL and author anyway | Candidate surface and lighting source | Not downloaded |
+| Any marketplace character/environment pack | `[NEEDS APPROVAL]` | Licence must be reviewed before purchase or download | Optional acceleration after Junction 3 | Not selected |
+
+## Junction 3 proof contract
+
+### Environment source
+
+- A small industrial diorama, not the complete level.
+- Modular floor, arch/support, gantry, railing, pipe run, machinery housing and crate.
+- Applied transforms, consistent metre scale, useful origins and restrained bevels.
+- Named materials for dark iron, stone, aged brass, painted metal and amber emission.
+- Geometry remains editable in Blender and is exported as GLB.
+
+### Character source
+
+- Neutral stylized humanoid used only to prove the pipeline; identity is `[NEEDS AUTHOR]`.
+- One armature with common English bone names and a clear rest pose.
+- Skinned low-poly mesh pieces with readable clothing/role silhouette but no canon-specific
+  insignia, uniform or equipment.
+- Exported animation actions: `idle`, `walk`, `inspect` and `brace`.
+- Godot import must expose a Skeleton3D, an AnimationPlayer and the expected clips.
+
+### Godot proof scene
+
+- Loads both GLBs rather than rebuilding their meshes in GDScript.
+- Runs in a named, repeatable `pipeline_showcase` scene.
+- Allows orbit/zoom and animation selection; displays current clip and asset state.
+- Uses engine-authored lighting so Blender and Godot rendering are judged separately.
+- Reports mesh count, material count, triangle count where available and animation names.
+
+## Provisional real-time budgets
+
+These are slice targets, not canon and not promises for a full campaign.
+
+| Category | Junction 3 target | 15-minute slice target |
+|---|---:|---:|
+| Character triangles | 5k–15k for proof | 15k–35k per hero, lower for background NPCs |
+| Environment visible triangles | under 150k | under 1.5M in the densest authored view |
+| Unique visible materials | under 12 | under 80, with reuse and instancing |
+| Hero animation clips | 4 | roughly 8–10 shared clips plus a few role-specific poses |
+| Target display | 1080p | 1080p |
+
+The Windows RTX 4070 Super is not permission to ignore the Ryzen 5 2600X bottleneck.
+Draw calls, physics bodies, navigation updates and script time are reviewed alongside GPU
+triangle counts.
+
+## Import policy
+
+- Prefer GLB/glTF for Godot runtime assets.
+- Apply Blender transforms before export; use metres and a consistent forward/up convention.
+- Keep stable bone names and rest pose across characters.
+- Use Godot's Humanoid SkeletonProfile/BoneMap when sharing externally sourced animations.
+- Extract or override Godot materials only when an engine-specific material is required.
+- Do not edit an imported GLB scene directly; wrap or inherit it so re-export remains safe.
+- Record every external texture, animation, model, sound and font here before committing it.
