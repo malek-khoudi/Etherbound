@@ -1,0 +1,85 @@
+# ---------- Godot 4 ----------
+.godot/
+/android/
+export_presets.cfg
+*.translation
+
+# ---------- Unity (only if the 3D route is taken later) ----------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+*.csproj
+*.unityproj
+*.sln
+*.userprefs
+
+# ---------- Unreal (only if the 3D route is taken later) ----------
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.VC.db
+*.opensdf
+*.sdf
+
+# ---------- Builds and exports ----------
+/builds/
+/export/
+/dist/
+*.exe
+*.dmg
+*.app/
+*.apk
+*.aab
+*.pck
+
+# ---------- Blender ----------
+*.blend1
+*.blend2
+*.blend@
+
+# ---------- Krita / art tool autosaves ----------
+*.kra~
+*-autosave.kra
+*~
+
+# ---------- Node (only if a browser prototype is added) ----------
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# ---------- Python tooling ----------
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---------- macOS ----------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ---------- Windows ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Editors ----------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+
+# ---------- Local agent scratch ----------
+/scratch/
+/.local/
