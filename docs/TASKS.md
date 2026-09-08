@@ -38,6 +38,12 @@ Release the claim when you finish.
 - [x] Claude: structural connection graph (32 assertions, all passing)
 - [ ] Claude: save/load
 
+## Handed to Codex
+
+- [ ] `docs/handoff/codex-01-playable-bay.md` — put the rescue on screen, greybox only.
+      Codex owns `game/scenes/**`, `game/ui/**`, `game/main.gd`.
+      Claude owns `game/core/**`, `game/tests/**`. Neither crosses.
+
 ## Next
 
 - [ ] Dialogue system with explicit state and NPC knowledge tracking
