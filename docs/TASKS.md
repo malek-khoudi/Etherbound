@@ -9,7 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| (none) | | | |
+| Codex | `codex/windows-toolchain` | `docs/TASKS.md`, `README.md`, `tools/test.sh`, `tools/toolchain.ps1` | 2026-09-08 |
 
 ---
 
