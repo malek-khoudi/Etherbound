@@ -1,0 +1,14 @@
+; Etherbound. Godot 4.x standard build, GDScript.
+; See AGENTS.md at the repo root before changing anything here.
+
+config_version=5
+
+[application]
+
+config/name="Etherbound"
+config/description="Narrative tactical RPG. Real-time exploration, turn-based incident mode."
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[rendering]
+
+renderer/rendering_method="forward_plus"

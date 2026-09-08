@@ -21,7 +21,11 @@ and a far more physics- and system-driven tactical layer.
 
 - **Real-time 3D exploration** of compact handcrafted locations. Not open world. Not enormous acts.
 - **Turn-based incident mode** for emergencies and combat. Exploration is not turn-based.
-- **Three active party members.** Not a large roster.
+- **Three active party members**, all natural Etherbound: Kinetic, Gravitic, Transmutative.
+  Not a large roster. See `docs/CANON.md` for what is deliberately excluded and why.
+- **Ordinary people are directable NPCs, not a party slot.** They cost no reserve, which makes
+  them the only units able to act when all three Etherbound are at capacity. This is the
+  dramatic engine of the slice-1 rescue. Do not reduce them to scenery.
 - **Systemic environmental problem-solving** is the core loop: collapses, rescues, machinery,
   heat, structures, evidence, containment. Combat is one case of it, not the point of it.
 - **Abilities obey their physical rules**, never "does X damage in radius Y". A Kinetic push

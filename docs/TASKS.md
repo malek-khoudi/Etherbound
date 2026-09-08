@@ -30,10 +30,10 @@ Release the claim when you finish.
 - [ ] Malek: verify `docs/CANON.md` seed against the Notion corpus
 - [ ] Malek: resolve the two `[NEEDS AUTHOR]` continuity items (Bren's Somatic Sense; Developing-vs-locked properties)
 - [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
-- [ ] Claude: Godot project scaffold, folder structure, project settings
+- [x] Claude: Godot project scaffold, folder structure, project settings
 - [ ] Claude: third-person orbital exploration controller
 - [ ] Claude: incident-mode trigger and turn loop
-- [ ] Claude: reserve and throughput as an enforced resource, not a display
+- [x] Claude: reserve and throughput as an enforced resource, not a display (25 assertions, all passing)
 - [ ] Claude: one Kinetic ability with visible anchor preview and a readable failure reason
 - [ ] Claude: one environmental interaction (structural connection graph, minimal)
 - [ ] Claude: save/load
@@ -53,3 +53,10 @@ Release the claim when you finish.
 
 - [x] Repo scaffold, LFS config, agent brief (2026-09-08)
 - [x] Route decision locked, non-goals written (2026-09-08)
+- [x] Party decided: Kinetic / Gravitic / Transmutative, all Etherbound (2026-09-08)
+- [x] Godot project + reserve/throughput core + headless test suite (2026-09-08)
+
+Run the suite:
+```
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path game --script res://tests/reserve_test.gd
+```

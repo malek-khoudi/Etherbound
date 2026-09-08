@@ -72,9 +72,30 @@ Set an explicit ceiling per game before writing any mystery content.
 
 ---
 
-## Slice 1 characters: TO BE WRITTEN
+## Slice 1 party: DECIDED 2026-09-08
 
-Three complementary playable adults at a small Boundary-related industrial site:
-a natural Kinetic, an equipment-dependent Wright specialist, and an ordinary skilled worker or guard.
+Three playable natural Etherbound at a small Boundary-related industrial site:
+
+| Slot | Affinity | Covers |
+|---|---|---|
+| 1 | **Kinetic** | Force, impulse, anchors that can fail |
+| 2 | **Gravitic** | Load, traction, where bodies fall and how they stop |
+| 3 | **Transmutative** | Material and contiguous geometry, maintained fronts |
+
+Between them the trio covers structure comprehensively, which suits a collapse and rescue.
+
+**Deliberately excluded from the party:**
+
+- **Wright.** Deferred, not killed. Equipment, supply and diagnostics are a system that
+  slice 1 does not need. Wrights remain canon and remain in the world as NPCs.
+- **Vital.** Nobody in the party can stabilise an injured person. Extraction is possible,
+  healing is not. Getting the injured to a clinic in time is a problem, not a spell.
+  `[CONFIRM]` Malek to confirm this is intent, not oversight.
+- **Thermic and Radiant.** No heat management, no scouting or long comms in slice 1.
+
+**Ordinary people are NOT a party slot but ARE mechanically load-bearing.** Site workers are
+directable NPCs. They draw from no reserve, so they are the only units able to act when all
+three Etherbound are at throughput capacity. They also carry the institutional and records
+knowledge the investigation layer runs on. See `AGENTS.md` section 3 rule 8.
 
 Names, exact location, dates and roles are `[NEEDS AUTHOR]`. None are established characters.
