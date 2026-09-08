@@ -9,7 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/vertical-slice` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-02-notes.md`, `tools/blender/**`, `art/models/characters/**`, `art/models/kit/**`, `game/assets/**`, `game/scenes/pipeline/**`, `game/tests/asset_pipeline_test.gd`, `game/project.godot` | 2026-09-09 |
+| Codex | `codex/vertical-slice` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-02-notes.md`, `tools/blender/**`, `art/models/characters/**`, `art/models/kit/**`, `game/assets/**`, `game/scenes/pipeline/**`, `game/tests/asset_pipeline_test.gd*`, `game/project.godot` | 2026-09-09 |
 
 ---
 
