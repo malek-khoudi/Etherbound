@@ -35,7 +35,7 @@ Release the claim when you finish.
 - [ ] Claude: incident-mode trigger and turn loop
 - [x] Claude: reserve and throughput as an enforced resource, not a display (25 assertions, all passing)
 - [ ] Claude: one Kinetic ability with visible anchor preview and a readable failure reason
-- [ ] Claude: one environmental interaction (structural connection graph, minimal)
+- [x] Claude: structural connection graph (32 assertions, all passing)
 - [ ] Claude: save/load
 
 ## Next
@@ -55,8 +55,6 @@ Release the claim when you finish.
 - [x] Route decision locked, non-goals written (2026-09-08)
 - [x] Party decided: Kinetic / Gravitic / Transmutative, all Etherbound (2026-09-08)
 - [x] Godot project + reserve/throughput core + headless test suite (2026-09-08)
+- [x] Structural connection graph + tools/test.sh runner (2026-09-08)
 
-Run the suite:
-```
-/Applications/Godot.app/Contents/MacOS/Godot --headless --path game --script res://tests/reserve_test.gd
-```
+Run the suites: `./tools/test.sh`

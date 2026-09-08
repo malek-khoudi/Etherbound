@@ -102,6 +102,19 @@ The novels are the authority. The game bends to them, never the reverse.
 
 ---
 
+## 4b. Running the tests
+
+```
+./tools/test.sh
+```
+
+Do NOT call Godot directly. Godot registers `class_name` globals only after an
+import pass, so a suite using a newly added class fails to parse without one.
+The script does the import first. Every new system gets a headless suite in
+`game/tests/` before it is called done.
+
+---
+
 ## 5. Repo layout
 
 ```
