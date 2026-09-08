@@ -4,6 +4,9 @@ Status: production brief for Junctions 0–10. This is an adaptation plan, not s
 
 Last updated: 2026-09-09
 
+Current gate: Junctions 0–3 complete. Junction 4 does not begin until the pipeline proof and
+one governing concept direction are accepted by Malek.
+
 ## North star
 
 Deliver one replayable 12–15 minute desktop incident that communicates the eventual game's

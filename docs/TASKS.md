@@ -9,7 +9,6 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/vertical-slice` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-02-notes.md`, `tools/blender/**`, `art/models/characters/**`, `art/models/kit/**`, `game/assets/**`, `game/scenes/pipeline/**`, `game/tests/asset_pipeline_test.gd*`, `game/project.godot` | 2026-09-09 |
 
 ---
 
@@ -71,5 +70,7 @@ Release the claim when you finish.
 - [x] Incident turn loop. The slice-1 rescue proven end to end (2026-09-08)
 - [x] Windows toolchain verified and connected: Godot, Blender, Krita, Git LFS (2026-09-08)
 - [x] Playable gantry-bay rescue greybox with anchor preview, countdown, failure and worker-prop solution (2026-09-08)
+- [x] Junctions 0–2: playable-bay merge, 15-minute vertical-slice brief and licence/provenance ledger (2026-09-09)
+- [x] Junction 3: editable Blender environment and rigged character exported to GLB, imported into Godot and covered by a headless contract test (2026-09-09)
 
 Run the suites: `./tools/test.sh`
