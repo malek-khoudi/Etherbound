@@ -1,0 +1,78 @@
+{
+  "prototype_notice": "PROTOTYPE INCIDENT — names and location need author approval",
+  "title": "GANTRY BAY RESCUE",
+  "anchor_reaction": 100.0,
+  "brace_relief": 150.0,
+  "brace_demand": 10.0,
+  "prop_support": 150.0,
+  "units": {
+    "kinetic": {
+      "id": "kess",
+      "name": "Kess",
+      "reserve": 150.0,
+      "throughput": 10.0
+    },
+    "worker": {
+      "id": "maren",
+      "name": "Maren"
+    }
+  },
+  "members": [
+    {
+      "id": "footing",
+      "label": "the footing",
+      "mass": 0.0,
+      "capacity": 10000.0,
+      "grounded": true,
+      "position": [0.0, 0.25, 0.0],
+      "size": [4.0, 0.5, 4.0],
+      "color": [0.18, 0.20, 0.21]
+    },
+    {
+      "id": "column",
+      "label": "the column",
+      "mass": 200.0,
+      "capacity": 2000.0,
+      "grounded": false,
+      "position": [0.0, 2.75, 0.0],
+      "size": [1.0, 5.0, 1.0],
+      "color": [0.24, 0.25, 0.25]
+    },
+    {
+      "id": "beam",
+      "label": "the main beam",
+      "mass": 150.0,
+      "capacity": 800.0,
+      "grounded": false,
+      "position": [2.5, 5.25, 0.0],
+      "size": [6.0, 0.65, 0.85],
+      "color": [0.16, 0.18, 0.19]
+    },
+    {
+      "id": "walkway",
+      "label": "the walkway",
+      "mass": 100.0,
+      "capacity": 900.0,
+      "grounded": false,
+      "position": [5.1, 4.55, 0.0],
+      "size": [4.8, 0.32, 2.2],
+      "color": [0.29, 0.27, 0.22]
+    },
+    {
+      "id": "crate",
+      "label": "the feedstock crate",
+      "mass": 300.0,
+      "capacity": 500.0,
+      "grounded": false,
+      "position": [5.7, 5.32, 0.0],
+      "size": [1.35, 1.2, 1.35],
+      "color": [0.35, 0.25, 0.12]
+    }
+  ],
+  "connections": [
+    {"from": "column", "to": "footing", "capacity": 3000.0, "kind": "bolted"},
+    {"from": "beam", "to": "column", "capacity": 900.0, "kind": "welded"},
+    {"from": "walkway", "to": "beam", "capacity": 350.0, "kind": "corroded"},
+    {"from": "crate", "to": "walkway", "capacity": 600.0, "kind": "resting"}
+  ]
+}
