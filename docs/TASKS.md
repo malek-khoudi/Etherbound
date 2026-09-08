@@ -9,7 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/playable-bay` | `docs/TASKS.md`, `docs/handoff/codex-01-notes.md`, `game/scenes/**`, `game/ui/**`, `game/main.gd`, `game/project.godot` | 2026-09-08 |
+| — | — | — | — |
 
 ---
 
@@ -40,9 +40,15 @@ Release the claim when you finish.
 
 ## Handed to Codex
 
-- [ ] `docs/handoff/codex-01-playable-bay.md` — put the rescue on screen, greybox only.
+- [x] `docs/handoff/codex-01-playable-bay.md` — put the rescue on screen, greybox only.
       Codex owns `game/scenes/**`, `game/ui/**`, `game/main.gd`.
       Claude owns `game/core/**`, `game/tests/**`. Neither crosses.
+
+## For Claude
+
+- [ ] `Structure.anchor_report()` describes the failure utilisation as "before you push,"
+  but the reported value comes from the post-reaction probe. Codex left core code unchanged
+  and displays its returned reason verbatim.
 
 ## Next
 
@@ -64,5 +70,6 @@ Release the claim when you finish.
 - [x] Structural connection graph + tools/test.sh runner (2026-09-08)
 - [x] Incident turn loop. The slice-1 rescue proven end to end (2026-09-08)
 - [x] Windows toolchain verified and connected: Godot, Blender, Krita, Git LFS (2026-09-08)
+- [x] Playable gantry-bay rescue greybox with anchor preview, countdown, failure and worker-prop solution (2026-09-08)
 
 Run the suites: `./tools/test.sh`
