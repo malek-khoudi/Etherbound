@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "canon_status": "NON_CANON_PROOF",
+  "generator": "tools/blender/build_pipeline_proof.py",
+  "blender_version": "5.2.1 LTS",
+  "environment": {
+    "source": "art/models/kit/pipeline_environment.blend",
+    "runtime": "game/assets/models/environment/pipeline_environment.glb",
+    "mesh_count": 79,
+    "triangle_count": 4316,
+    "material_count": 5
+  },
+  "character": {
+    "source": "art/models/characters/pipeline_character.blend",
+    "runtime": "game/assets/models/characters/pipeline_character.glb",
+    "mesh_count": 19,
+    "triangle_count": 1136,
+    "material_count": 5,
+    "bone_count": 18,
+    "animations": [
+      "idle",
+      "walk",
+      "inspect",
+      "brace"
+    ]
+  }
+}
