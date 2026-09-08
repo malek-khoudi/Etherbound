@@ -25,8 +25,8 @@ Release the claim when you finish.
 
 - [x] Repo created and pushed
 - [x] Git LFS installed on the Mac
-- [ ] Malek: install Godot 4 standard, Blender, Krita on the **PC**, plus Git + Git LFS
-- [ ] Malek: report PC RAM
+- [x] Malek: install Godot 4 standard, Blender, Krita on the **PC**, plus Git + Git LFS
+- [x] Malek: report PC RAM — **16 GB**
 - [ ] Malek: verify `docs/CANON.md` seed against the Notion corpus
 - [ ] Malek: resolve the two `[NEEDS AUTHOR]` continuity items (Bren's Somatic Sense; Developing-vs-locked properties)
 - [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
@@ -63,5 +63,6 @@ Release the claim when you finish.
 - [x] Godot project + reserve/throughput core + headless test suite (2026-09-08)
 - [x] Structural connection graph + tools/test.sh runner (2026-09-08)
 - [x] Incident turn loop. The slice-1 rescue proven end to end (2026-09-08)
+- [x] Windows toolchain verified and connected: Godot, Blender, Krita, Git LFS (2026-09-08)
 
 Run the suites: `./tools/test.sh`

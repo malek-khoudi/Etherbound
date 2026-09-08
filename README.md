@@ -24,6 +24,24 @@ cd Etherbound
 
 Open `game/` in Godot 4 (standard build, not .NET).
 
+### Windows toolchain
+
+Verify Godot, Blender, Krita, Git LFS and Git Bash from PowerShell:
+
+```powershell
+.\tools\toolchain.ps1
+```
+
+The verifier accepts `GODOT`, `BLENDER`, `KRITA` and `GIT_BASH` environment
+overrides. Otherwise it checks `PATH` and the normal Windows install locations.
+It rejects Godot Mono/.NET because this project uses the standard GDScript build.
+
+Run the required headless suites from PowerShell through Git Bash:
+
+```powershell
+& 'C:\Program Files\Git\bin\bash.exe' .\tools\test.sh
+```
+
 ## Layout
 
 | Path | Contents |
