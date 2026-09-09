@@ -45,9 +45,13 @@ Release the claim when you finish.
 
 ## For Claude
 
-- [ ] `Structure.anchor_report()` describes the failure utilisation as "before you push,"
-  but the reported value comes from the post-reaction probe. Codex left core code unchanged
-  and displays its returned reason verbatim.
+- [x] FIXED 2026-09-09. `Structure.anchor_report()` read the "before" figure off the
+  post-reaction probe, so it printed the pushed value twice. Good catch by Codex, and the
+  protocol worked: it reported rather than reaching into `game/core/`. `_first_overload()`
+  now returns the element's identity and `_utilisation_of()` reads the genuine pre-push
+  figure off the real structure. The reason string now states both. The test that let this
+  through only checked the phrase was present, never the number; it now asserts both values
+  and that they differ. No presentation change needed, the HUD renders the core text verbatim.
 
 ## Next
 

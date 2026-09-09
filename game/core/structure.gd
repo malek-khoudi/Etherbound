@@ -244,19 +244,31 @@ func anchor_report(anchor_id: StringName, reaction: float) -> Dictionary:
 			"failing_element": "",
 		}
 
+	# The "before" figure must come from the real structure, never the probe.
+	var failing_before: float = _utilisation_of(failure)
 	return {
 		"holds": false,
-		"reason": "%s fails, not %s. It is at %d%% before you push." % [
-			failure["label"], anchor.label, int(round(failure["utilisation_before"] * 100.0))
+		"reason": "%s fails, not %s. It is at %d%% before you push, %d%% after." % [
+			failure["label"], anchor.label,
+			int(round(failing_before * 100.0)),
+			int(round(failure["utilisation"] * 100.0)),
 		],
 		"failing_element": failure["label"],
 		"utilisation_before": before,
 		"utilisation_after": failure["utilisation"],
+		"failing_utilisation_before": failing_before,
+		"failing_utilisation_after": failure["utilisation"],
 	}
 
 ## Walk from a member down to ground, returning the first element over capacity.
 ## Connections are checked before the members they feed, because a joint that
 ## lets go is the more common and more legible failure.
+##
+## Returns the element's IDENTITY, not just its numbers. anchor_report() runs
+## this against a post-push probe, so any "before" figure has to be read back
+## off the real structure. Returning a utilisation from here and calling it
+## "before" reports the pushed value twice, which tells the player the joint was
+## already failing when in fact their own action broke it.
 func _first_overload(from_id: StringName) -> Dictionary:
 	var visited: Dictionary = {}
 	var stack: Array[StringName] = [from_id]
@@ -269,16 +281,25 @@ func _first_overload(from_id: StringName) -> Dictionary:
 		if m == null:
 			continue
 		if m.utilisation() > 1.0:
-			return {"label": m.label, "utilisation": m.utilisation(),
-				"utilisation_before": m.load / maxf(m.capacity, 0.01)}
+			return {"kind": "member", "id": id, "label": m.label,
+				"utilisation": m.utilisation()}
 		for to_id in supports_of(id):
 			var c: Connection = connection_between(id, to_id)
 			if c != null and c.utilisation() > 1.0:
-				return {"label": "%s under %s" % [c.label(), m.label],
-					"utilisation": c.utilisation(),
-					"utilisation_before": c.load / maxf(c.capacity, 0.01)}
+				return {"kind": "connection", "from_id": id, "to_id": to_id,
+					"label": "%s under %s" % [c.label(), m.label],
+					"utilisation": c.utilisation()}
 			stack.append(to_id)
 	return {}
+
+## Utilisation of a failing element as it stands in THIS structure. Used to read
+## the genuine pre-push figure after the probe has found what breaks.
+func _utilisation_of(failure: Dictionary) -> float:
+	if failure.get("kind", "") == "member":
+		var m: Member = _members.get(failure["id"])
+		return m.utilisation() if m != null else 0.0
+	var c: Connection = connection_between(failure.get("from_id", &""), failure.get("to_id", &""))
+	return c.utilisation() if c != null else 0.0
 
 
 # --- damage --------------------------------------------------------------
