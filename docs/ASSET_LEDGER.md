@@ -16,6 +16,8 @@ Last updated: 2026-09-09
 | `game/assets/models/environment/` | Godot-ready GLB environment exports. Git LFS. |
 | `game/assets/materials/` | Godot material resources and approved texture outputs. |
 | `tools/blender/` | Repeatable Blender Python builders and exporters. |
+| `godot-mcp-pro-4d5f491cf7e62ae249b8615be84133abf9990017/` | Development-only snapshot of the Godot MCP editor add-on; not runtime game content. |
+| `mcp-1.0.0.zip` | Development-only Blender Lab MCP add-on archive; not runtime game content. |
 
 The checked-in `.blend` file is the editable source. The checked-in `.glb` file is the
 portable runtime interchange. Godot scenes add engine lighting, navigation, collision,
@@ -31,6 +33,12 @@ interaction state and gameplay; Blender files do not contain game logic.
 | Mixamo humanoid animations | Adobe Mixamo | Adobe states characters and animations may be used royalty-free in video games; preserve downloaded originals and record clip names | Candidate production locomotion/gesture source | Not downloaded |
 | Poly Haven textures/HDRIs/models | Poly Haven | CC0; record each asset URL and author anyway | Candidate surface and lighting source | Not downloaded |
 | Any marketplace character/environment pack | `[NEEDS APPROVAL]` | Licence must be reviewed before purchase or download | Optional acceleration after Junction 3 | Not selected |
+| Blender Lab MCP add-on `mcp-1.0.0.zip` | Blender Lab official package | GPL-3.0-or-later; SHA-256 `838C3449F01015C861290658AE67F122F0846F7882F60A5DFDA0EF7E6A9B8403` | Local Blender authoring automation only | Audited and installed locally 2026-09-09; never exported with the game |
+| Godot MCP Pro editor add-on v1.16.0 | Public editor add-on snapshot from `youichi-uda/godot-mcp-pro` | MIT for `addons/godot_mcp/`; copyright Youichi Uda (y1uda). The separately sold server is proprietary and absent. | Future local Godot editor automation only | Source snapshot and required licence notice recorded 2026-09-09; paid Node.js MCP server is absent, so the add-on is not enabled or connected |
+
+The MCP packages are tools, not game dependencies, and neither package may be included in a
+Godot export. The Godot add-on remains outside `game/addons/` until the separately licensed
+paid server package is available for review.
 
 ## Junction 3 proof contract
 
