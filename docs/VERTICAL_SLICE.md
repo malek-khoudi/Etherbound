@@ -4,8 +4,13 @@ Status: production brief for Junctions 0–10. This is an adaptation plan, not s
 
 Last updated: 2026-09-09
 
-Current gate: Junctions 0–3 complete. Junction 4 does not begin until the pipeline proof and
-one governing concept direction are accepted by Malek.
+Current gate: Junctions 0–9 complete as a non-canon vertical-slice implementation. Junction 10
+is deliberately not started. Final narrative identity and canon approval remain author gates.
+
+Prototype visual direction accepted through Malek's instruction to build from the supplied
+concept collection: weathered dark iron and stone, restrained brass, amber work light, cool
+wet-environment fill and practical workwear silhouettes. Selection of one final governing image
+remains `[NEEDS AUTHOR]` and may revise, but does not block evaluation of this prototype.
 
 ## North star
 
@@ -125,6 +130,21 @@ No open world, settlement simulation, loading-screen travel, large roster or com
 | 8. Narrative | Three clues, report choice and consequence state work without invented canon. |
 | 9. Polish | Audio, lighting, VFX, save/checkpoint, UI and performance pass are complete. |
 | 10. Audit | Canon, code, licence, performance and unfamiliar-player review pass. |
+
+## Junctions 4–9 implementation record
+
+| Junction | Implemented evidence |
+|---|---|
+| 4. Environment | `slice_environment.blend` / `.glb`: one continuous approach, control area, gantry bay and consequence area; 171 Blender meshes, 12,052 triangles, six materials. |
+| 5. Characters | Four separate `.blend` / `.glb` role silhouettes on a shared 18-bone rig; eight clips each. All identities remain `[PROTOTYPE]`. |
+| 6. Exploration | WASD and click-to-move route traversal, player orbital camera, two animated followers, worker staging and proximity interactions. |
+| 7. Incident | Kinetic load-taking, Gravitic acceleration change, Transmutative contiguous repair front and ordinary-worker prop all alter the real structural model and produce visible 3D feedback. Ending a round without support still collapses the walkway with a readable reason. |
+| 8. Narrative | Three authored prototype evidence objects distinguish observation from inference; the report choice branches into two immediate consequence states without naming a canon institution or culprit. |
+| 9. Polish | Rain/steam/dust VFX, warm/cool lighting, generated local ambience and action sounds, F5/F9 checkpoint save/load, F12 capture, quiet exploration HUD, incident UI and performance readout. Six named Godot review captures are committed. |
+
+The automated capture pass measured 90–120 FPS at 1280×720 on the Windows development PC,
+with roughly 2,620 rendered objects in the authored views. This is a local development reading,
+not an unfamiliar-player or shipping-performance audit; those belong to Junction 10.
 
 ## Review loop
 

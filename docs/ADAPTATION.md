@@ -30,6 +30,19 @@ If the player cannot predict it, the game must say so before they commit.
 | `SECONDS_PER_ROUND = 6.0` | Converts a per-second reserve drain into a per-round one | Not canon. Tuned so a full-throughput hold lasts a handful of rounds, not one and not thirty. |
 | Fixed turn order, no initiative | Predictability over simulation | Not canon. |
 | External support as a scalar | An Etherbound or a prop taking load off a member | Simplified model of a real canon act. |
+| Click-to-move on a constrained continuous route | Makes the compact slice traversable without claiming a real-world site layout | Not canon. |
+| Three incident rounds | Creates a readable failure clock for the 15-minute demo | Not canon. |
+| Four required role demonstrations | Ensures the prototype visibly teaches each party/worker contribution | Tutorial abstraction, not canon. |
+| Evidence/report state machine | Makes observation, inference and reporting consequences testable | The exact clues, recipient and dialogue are non-canon prototypes. |
+| F5/F9 phase checkpoint | Supports short demo play and review | Purely a game convenience. |
+
+## Vertical-slice prototype labels
+
+`Kinetic [Prototype]`, `Gravitic [Prototype]`, `Transmutative [Prototype]`, `Site Worker
+[Prototype]` and `The Gantry at the Weathered Works` are functional labels only. They assert
+no character identity, institution, exact location, era or novel event. Their dialogue and
+evidence text remain replacement content until Malek resolves the author locks in
+`docs/VERTICAL_SLICE.md`.
 
 ---
 
