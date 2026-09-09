@@ -9,6 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
+| Codex | `codex/tooling-snapshot` | `docs/TASKS.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-03-notes.md`, `game/project.godot`, `art/concept/**`, `godot-mcp-pro-4d5f491cf7e62ae249b8615be84133abf9990017/**`, `mcp-1.0.0.zip` | 2026-09-09 |
 
 ---
 
