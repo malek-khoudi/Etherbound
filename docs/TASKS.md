@@ -9,6 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
+| Codex | `codex/junctions-4-9` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/ADAPTATION.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-04-notes.md`, `tools/blender/**`, `art/models/**`, `game/project.godot`, `game/main.gd`, `game/core/**`, `game/scenes/**`, `game/ui/**`, `game/tests/**`, `game/assets/**`, `game/data/**`, `game/audio/**` | 2026-09-09 |
 
 ---
 
