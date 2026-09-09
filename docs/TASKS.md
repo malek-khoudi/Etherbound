@@ -9,7 +9,9 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/junction-10-audit` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/JUNCTION_10_AUDIT.md`, `docs/PRESENTATION_ROADMAP.md` | 2026-09-10 |
+| (none) | | | |
+
+Claude released `game/core/**` and `game/tests/**` on 2026-09-10.
 
 ---
 
@@ -61,6 +63,19 @@ Release the claim when you finish.
 - [x] Four-role 3D rescue encounter with a visible failure/collapse path
 - [x] Consequence scene reflecting the reporting choice
 - [ ] Junction 10: author/canon, code, licence, accessibility, performance and unfamiliar-player audit
+- [x] **J10-01 core half (Claude, 2026-09-10):** `Incident` is now the sole outcome authority.
+      Outcome derives from `Structure` + `Etherbound`, never from action flags. Rescue modelled
+      as extraction work that only advances while the path stands. `SliceState`'s checklist is
+      marked deprecated as an outcome authority and left behaviour-intact so nothing breaks.
+- [x] **J10-03 (Claude, 2026-09-10):** maintained effects have a real lifecycle. `lighten()`
+      and `reshape()` added; all effects withdraw when the body drops them; a Transmutative
+      front follows its progress, reverts if abandoned, and becomes permanent and free on
+      completion.
+- [ ] **J10-04 (Claude, next):** F9 does not restore an equivalent world. Needs a complete
+      versioned snapshot (reserves, exhaustion, commitments, effects, structure, round) or an
+      explicit reduction of checkpoint semantics to a named phase restart.
+- [ ] `docs/handoff/codex-05-outcome-rewire.md` — Codex rewires the scene to consume
+      `Incident.outcome()` and makes the anchor preview live (J10-01 presentation half, J10-02).
 
 ## Blocked
 

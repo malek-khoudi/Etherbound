@@ -72,6 +72,21 @@ func incident_actions_complete() -> bool:
 	return true
 
 
+## DEPRECATED AS AN OUTCOME AUTHORITY (J10-01, 2026-09-10).
+##
+## These functions track which lessons the player has covered. That is all they
+## may ever do. They MUST NOT decide whether the structure fails or the casualty
+## is saved: a checklist of four button presses is not physics, and an incomplete
+## lesson must never be rendered as a collapse.
+##
+## The authority is `Incident.outcome()`, backed by `Structure` and `Etherbound`.
+## Gravitic alone puts the walkway at 220 against a 350 bracket and genuinely
+## holds; the checklist below fails it. A worker's prop holds indefinitely; the
+## checklist kills it on round four.
+##
+## Behaviour is left intact here so the existing scene and its suite keep
+## running. Rewiring `vertical_slice.gd` to consume `Incident.outcome()` is
+## handed to Codex in docs/handoff/codex-05-outcome-rewire.md.
 func end_incident_round() -> Dictionary:
 	if phase != Phase.INCIDENT:
 		last_reason = "There is no active incident round."
