@@ -9,7 +9,10 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/junction-10-audit` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/JUNCTION_10_AUDIT.md`, `docs/PRESENTATION_ROADMAP.md` | 2026-09-10 |
+| Claude | `claude/j10-outcome-authority` | `game/core/incident.gd`, `game/core/slice_state.gd`, `game/tests/incident_test.gd`, `game/tests/outcome_test.gd` | 2026-09-10 |
+
+Codex: `game/scenes/**`, `game/ui/**`, art and Blender are yours and untouched.
+Claude is on J10-01 / J10-03 only. Do not edit `game/core/**` or `game/tests/**`.
 
 ---
 
