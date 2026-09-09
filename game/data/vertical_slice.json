@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "canon_status": "NON_CANON_ADAPTATION_PROTOTYPE",
+  "title": "THE GANTRY AT THE WEATHERED WORKS",
+  "prototype_notice": "15-MINUTE NON-CANON VERTICAL SLICE — identities and location await author approval",
+  "arrival": [
+    {
+      "speaker": "SITE WORKER [PROTOTYPE]",
+      "line": "The upper gantry has started speaking in ways I do not like. We inspect first; we guess only after."
+    },
+    {
+      "speaker": "KINETIC [PROTOTYPE]",
+      "line": "Show us the load path. If it moves, I need to know what will carry me in return."
+    },
+    {
+      "speaker": "TRANSMUTATIVE [PROTOTYPE]",
+      "line": "And I need the material boundary. Repair without continuity is theatre."
+    }
+  ],
+  "objectives": {
+    "arrival": "Meet the worker and enter the site.",
+    "exploration": "Cross the approach, inspect the work area, then examine the gantry bracket.",
+    "incident": "Use all four roles to stabilise the gantry before the load path fails.",
+    "investigation": "Examine exactly three pieces of evidence, then file a report.",
+    "consequence": "Review the immediate material consequence."
+  },
+  "incident_model": {
+    "anchor_reaction": 100.0,
+    "brace_relief": 150.0,
+    "prop_support": 150.0,
+    "gravitic_factor": 0.55,
+    "repair_capacity": 180.0,
+    "members": [
+      {"id": "footing", "label": "the footing", "mass": 0.0, "capacity": 10000.0, "grounded": true},
+      {"id": "column", "label": "the column", "mass": 200.0, "capacity": 2000.0, "grounded": false},
+      {"id": "beam", "label": "the main beam", "mass": 150.0, "capacity": 800.0, "grounded": false},
+      {"id": "walkway", "label": "the walkway", "mass": 100.0, "capacity": 900.0, "grounded": false},
+      {"id": "crate", "label": "the feedstock crate", "mass": 300.0, "capacity": 500.0, "grounded": false}
+    ],
+    "connections": [
+      {"from": "column", "to": "footing", "capacity": 3000.0, "kind": "bolted"},
+      {"from": "beam", "to": "column", "capacity": 900.0, "kind": "welded"},
+      {"from": "walkway", "to": "beam", "capacity": 450.0, "incident_capacity": 350.0, "kind": "corroded"},
+      {"from": "crate", "to": "walkway", "capacity": 600.0, "kind": "resting"}
+    ]
+  },
+  "interactions": [
+    {
+      "id": "signal_set",
+      "kind": "inspection",
+      "position": [-3.2, 0.0, -1.3],
+      "title": "PORTABLE SIGNAL SET [PROTOTYPE]",
+      "observation": "The instrument has power and its physical relay is intact.",
+      "inference": "A missing message cannot yet be blamed on this instrument."
+    },
+    {
+      "id": "maintenance_ledger",
+      "kind": "inspection",
+      "position": [-6.25, 0.0, -1.46],
+      "title": "WORK LEDGER [PROTOTYPE]",
+      "observation": "The latest visible entry records an inspection, not a completed replacement.",
+      "inference": "The page alone does not identify who knew the bracket had worsened."
+    },
+    {
+      "id": "gantry_bracket",
+      "kind": "incident_trigger",
+      "position": [2.9, 0.0, 0.0],
+      "title": "CORRODED GANTRY BRACKET",
+      "observation": "The connection is at 89% before an added Kinetic reaction and 111% after it.",
+      "inference": "A push without a sound anchor will cause the connection to fail."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "fracture_surface",
+      "position": [10.7, 0.0, -1.15],
+      "title": "BRACKET FRAGMENT",
+      "observation": "Corrosion crosses part of the load-bearing section; the remaining metal shows a fresh fracture.",
+      "inference": "The fragment supports progressive weakening, but does not identify responsibility."
+    },
+    {
+      "id": "control_record",
+      "position": [11.25, 0.0, -0.35],
+      "title": "CONTROL RECORD",
+      "observation": "The recorded load remained within the posted working range before the incident.",
+      "inference": "Normal recorded load does not prove the connection was sound."
+    },
+    {
+      "id": "prop_imprint",
+      "position": [12.0, 0.0, 1.2],
+      "title": "PROP IMPRINT",
+      "observation": "A fresh compression mark aligns beneath the walkway's surviving load path.",
+      "inference": "The ordinary worker's prop carried load after the Etherbound commitments ended."
+    }
+  ],
+  "report_choices": [
+    {
+      "id": "observations_only",
+      "label": "REPORT OBSERVATIONS; MARK CAUSE UNRESOLVED",
+      "body": "Separate the three observed facts from the still-unverified explanation."
+    },
+    {
+      "id": "claim_cause",
+      "label": "STATE AN UNVERIFIED CAUSE AS FACT",
+      "body": "File a confident explanation that the available evidence does not establish."
+    }
+  ],
+  "consequences": {
+    "observations_only": {
+      "heading": "THE SITE REMAINS OPEN TO THE TRUTH",
+      "worker_line": "You wrote what the metal can support. The next inspection can still change the answer.",
+      "detail": "The gantry stays isolated, the evidence remains tagged, and no unsupported blame is fixed in the record."
+    },
+    "claim_cause": {
+      "heading": "CERTAINTY OUTRAN THE EVIDENCE",
+      "worker_line": "That may be the answer. It is not yet what we observed.",
+      "detail": "The same gantry stands, but the report now carries a claim the three clues cannot prove."
+    }
+  }
+}
