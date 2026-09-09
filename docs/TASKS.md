@@ -9,10 +9,9 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Claude | `claude/j10-outcome-authority` | `game/core/incident.gd`, `game/core/slice_state.gd`, `game/tests/incident_test.gd`, `game/tests/outcome_test.gd` | 2026-09-10 |
+| (none) | | | |
 
-Codex: `game/scenes/**`, `game/ui/**`, art and Blender are yours and untouched.
-Claude is on J10-01 / J10-03 only. Do not edit `game/core/**` or `game/tests/**`.
+Claude released `game/core/**` and `game/tests/**` on 2026-09-10.
 
 ---
 
@@ -64,6 +63,19 @@ Claude is on J10-01 / J10-03 only. Do not edit `game/core/**` or `game/tests/**`
 - [x] Four-role 3D rescue encounter with a visible failure/collapse path
 - [x] Consequence scene reflecting the reporting choice
 - [ ] Junction 10: author/canon, code, licence, accessibility, performance and unfamiliar-player audit
+- [x] **J10-01 core half (Claude, 2026-09-10):** `Incident` is now the sole outcome authority.
+      Outcome derives from `Structure` + `Etherbound`, never from action flags. Rescue modelled
+      as extraction work that only advances while the path stands. `SliceState`'s checklist is
+      marked deprecated as an outcome authority and left behaviour-intact so nothing breaks.
+- [x] **J10-03 (Claude, 2026-09-10):** maintained effects have a real lifecycle. `lighten()`
+      and `reshape()` added; all effects withdraw when the body drops them; a Transmutative
+      front follows its progress, reverts if abandoned, and becomes permanent and free on
+      completion.
+- [ ] **J10-04 (Claude, next):** F9 does not restore an equivalent world. Needs a complete
+      versioned snapshot (reserves, exhaustion, commitments, effects, structure, round) or an
+      explicit reduction of checkpoint semantics to a named phase restart.
+- [ ] `docs/handoff/codex-05-outcome-rewire.md` — Codex rewires the scene to consume
+      `Incident.outcome()` and makes the anchor preview live (J10-01 presentation half, J10-02).
 
 ## Blocked
 
