@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "canon_status": "NON_CANON_ADAPTATION_PROTOTYPE",
+  "generator": "tools/blender/build_vertical_slice.py",
+  "blender_version": "5.2.1 LTS",
+  "concept_direction": "weathered dark iron and stone, restrained brass, amber work light, cool wet fill",
+  "environment": {
+    "source": "art/models/kit/slice_environment.blend",
+    "runtime": "game/assets/models/environment/slice_environment.glb",
+    "preview": "art/models/kit/slice_environment_preview.png",
+    "mesh_count": 171,
+    "triangle_count": 12052,
+    "material_count": 6,
+    "zones": [
+      "approach",
+      "control",
+      "gantry",
+      "consequence"
+    ]
+  },
+  "characters": [
+    {
+      "role": "kinetic",
+      "source": "art/models/characters/slice_kinetic.blend",
+      "runtime": "game/assets/models/characters/slice_kinetic.glb",
+      "preview": "art/models/characters/slice_kinetic_preview.png",
+      "mesh_count": 22,
+      "triangle_count": 1460,
+      "material_count": 6,
+      "bone_count": 18,
+      "animations": [
+        "idle",
+        "walk",
+        "inspect",
+        "brace",
+        "point",
+        "operate",
+        "kneel",
+        "stagger"
+      ]
+    },
+    {
+      "role": "gravitic",
+      "source": "art/models/characters/slice_gravitic.blend",
+      "runtime": "game/assets/models/characters/slice_gravitic.glb",
+      "preview": "art/models/characters/slice_gravitic_preview.png",
+      "mesh_count": 23,
+      "triangle_count": 1504,
+      "material_count": 6,
+      "bone_count": 18,
+      "animations": [
+        "idle",
+        "walk",
+        "inspect",
+        "brace",
+        "point",
+        "operate",
+        "kneel",
+        "stagger"
+      ]
+    },
+    {
+      "role": "transmutative",
+      "source": "art/models/characters/slice_transmutative.blend",
+      "runtime": "game/assets/models/characters/slice_transmutative.glb",
+      "preview": "art/models/characters/slice_transmutative_preview.png",
+      "mesh_count": 22,
+      "triangle_count": 1316,
+      "material_count": 6,
+      "bone_count": 18,
+      "animations": [
+        "idle",
+        "walk",
+        "inspect",
+        "brace",
+        "point",
+        "operate",
+        "kneel",
+        "stagger"
+      ]
+    },
+    {
+      "role": "worker",
+      "source": "art/models/characters/slice_worker.blend",
+      "runtime": "game/assets/models/characters/slice_worker.glb",
+      "preview": "art/models/characters/slice_worker_preview.png",
+      "mesh_count": 22,
+      "triangle_count": 1396,
+      "material_count": 6,
+      "bone_count": 18,
+      "animations": [
+        "idle",
+        "walk",
+        "inspect",
+        "brace",
+        "point",
+        "operate",
+        "kneel",
+        "stagger"
+      ]
+    }
+  ]
+}
