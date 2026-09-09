@@ -89,6 +89,15 @@ func _test_failure_names_the_joint_not_the_beam() -> void:
 	_check("blames the corroded joint", r["failing_element"].contains("corroded"), str(r))
 	_check("does not blame the walkway member itself", r["failing_element"] != "the walkway", r["failing_element"])
 	_check("states prior utilisation", r["reason"].contains("before you push"))
+	# The bug this guards: the "before" figure was read off the post-push probe,
+	# so it reported the pushed value twice and told the player the joint was
+	# already failing when their own push is what broke it.
+	_check("before figure is the REAL pre-push one", is_equal_approx(r["failing_utilisation_before"], 400.0 / 450.0),
+		"got %f, expected %f" % [r["failing_utilisation_before"], 400.0 / 450.0])
+	_check("after figure is the pushed one", is_equal_approx(r["failing_utilisation_after"], 500.0 / 450.0),
+		"got %f" % r["failing_utilisation_after"])
+	_check("before and after actually differ", not is_equal_approx(r["failing_utilisation_before"], r["failing_utilisation_after"]))
+	_check("reason quotes 89% as the prior state, not 111%", r["reason"].contains("89% before"), r["reason"])
 	print("        \"%s\"" % r["reason"])
 
 
