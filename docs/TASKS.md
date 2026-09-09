@@ -9,6 +9,7 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
+| Codex | `codex/junction-10-audit` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/JUNCTION_10_AUDIT.md`, `docs/PRESENTATION_ROADMAP.md` | 2026-09-10 |
 
 ---
 
