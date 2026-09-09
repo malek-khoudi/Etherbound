@@ -9,7 +9,6 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/junctions-4-9` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/ADAPTATION.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-04-notes.md`, `tools/blender/**`, `art/models/**`, `game/project.godot`, `game/main.gd`, `game/core/**`, `game/scenes/**`, `game/ui/**`, `game/tests/**`, `game/assets/**`, `game/data/**`, `game/audio/**` | 2026-09-09 |
 
 ---
 
@@ -31,12 +30,12 @@ Release the claim when you finish.
 - [ ] Malek: resolve the two `[NEEDS AUTHOR]` continuity items (Bren's Somatic Sense; Developing-vs-locked properties)
 - [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
 - [x] Claude: Godot project scaffold, folder structure, project settings
-- [ ] Claude: third-person orbital exploration controller
+- [x] Codex: orbital exploration camera, WASD/click navigation and animated party followers
 - [x] Claude: incident-mode turn loop (82 assertions across 3 suites, all passing)
 - [x] Claude: reserve and throughput as an enforced resource, not a display (25 assertions, all passing)
-- [ ] Claude: one Kinetic ability with visible anchor preview and a readable failure reason
+- [x] Codex: visible Kinetic anchor/load-path action with the real 89% before / 111% after preview
 - [x] Claude: structural connection graph (32 assertions, all passing)
-- [ ] Claude: save/load
+- [x] Codex: F5/F9 phase checkpoint save/load for the vertical slice
 
 ## Handed to Codex
 
@@ -56,14 +55,16 @@ Release the claim when you finish.
 
 ## Next
 
-- [ ] Dialogue system with explicit state and NPC knowledge tracking
-- [ ] Investigation layer: evidence objects, conflicting accounts, reporting choice
-- [ ] The rescue encounter
-- [ ] Aftermath scene showing material consequence
+- [x] Prototype authored dialogue with explicit phase state; final voices remain `[NEEDS AUTHOR]`
+- [x] Investigation layer: exactly three evidence objects, observation/inference split and report choice
+- [x] Four-role 3D rescue encounter with a visible failure/collapse path
+- [x] Consequence scene reflecting the reporting choice
+- [ ] Junction 10: author/canon, code, licence, accessibility, performance and unfamiliar-player audit
 
 ## Blocked
 
-- All narrative content is blocked on the CANON.md verification and the slice-1 character definitions.
+- Final narrative and canon approval are blocked on CANON.md verification and the slice-1
+  character definitions. The deliberately neutral `[PROTOTYPE]` slice remains playable.
 
 ## Done
 
@@ -78,5 +79,11 @@ Release the claim when you finish.
 - [x] Junctions 0–2: playable-bay merge, 15-minute vertical-slice brief and licence/provenance ledger (2026-09-09)
 - [x] Junction 3: editable Blender environment and rigged character exported to GLB, imported into Godot and covered by a headless contract test (2026-09-09)
 - [x] User concept-art batch and audited Blender/Godot MCP development snapshots committed; Godot project verified on 4.7.2 standard (2026-09-09)
+- [x] Junction 4: continuous four-zone Blender environment imported and runtime-reviewed (2026-09-09)
+- [x] Junction 5: four distinct shared-rig role silhouettes with eight clips each (2026-09-09)
+- [x] Junction 6: orbital traversal, party followers and proximity interactions (2026-09-09)
+- [x] Junction 7: four-role structural rescue plus readable collapse failure (2026-09-09)
+- [x] Junction 8: three clues, evidence-gated report and two consequences (2026-09-09)
+- [x] Junction 9: audio, lighting, VFX, checkpoint, UI, runtime captures and performance pass (2026-09-09)
 
 Run the suites: `./tools/test.sh`
