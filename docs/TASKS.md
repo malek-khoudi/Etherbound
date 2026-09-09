@@ -9,7 +9,6 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/tooling-snapshot` | `docs/TASKS.md`, `docs/ASSET_LEDGER.md`, `docs/handoff/codex-03-notes.md`, `game/project.godot`, `art/concept/**`, `godot-mcp-pro-4d5f491cf7e62ae249b8615be84133abf9990017/**`, `mcp-1.0.0.zip` | 2026-09-09 |
 
 ---
 
@@ -77,5 +76,6 @@ Release the claim when you finish.
 - [x] Playable gantry-bay rescue greybox with anchor preview, countdown, failure and worker-prop solution (2026-09-08)
 - [x] Junctions 0–2: playable-bay merge, 15-minute vertical-slice brief and licence/provenance ledger (2026-09-09)
 - [x] Junction 3: editable Blender environment and rigged character exported to GLB, imported into Godot and covered by a headless contract test (2026-09-09)
+- [x] User concept-art batch and audited Blender/Godot MCP development snapshots committed; Godot project verified on 4.7.2 standard (2026-09-09)
 
 Run the suites: `./tools/test.sh`
