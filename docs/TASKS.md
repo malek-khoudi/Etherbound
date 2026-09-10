@@ -9,7 +9,6 @@ Release the claim when you finish.
 
 | Agent | Branch | Files claimed | Started |
 |---|---|---|---|
-| Codex | `codex/junction-10-audit` | `docs/TASKS.md`, `docs/VERTICAL_SLICE.md`, `docs/JUNCTION_10_AUDIT.md`, `docs/PRESENTATION_ROADMAP.md` | 2026-09-10 |
 
 ---
 
@@ -29,7 +28,7 @@ Release the claim when you finish.
 - [x] Malek: report PC RAM — **16 GB**
 - [ ] Malek: verify `docs/CANON.md` seed against the Notion corpus
 - [ ] Malek: resolve the two `[NEEDS AUTHOR]` continuity items (Bren's Somatic Sense; Developing-vs-locked properties)
-- [ ] Malek: name and define the three slice-1 playable characters (Kinetic / Wright specialist / ordinary skilled worker)
+- [ ] Malek: name and define the three playable Etherbound (Kinetic / Gravitic / Transmutative) and the separate directable ordinary worker
 - [x] Claude: Godot project scaffold, folder structure, project settings
 - [x] Codex: orbital exploration camera, WASD/click navigation and animated party followers
 - [x] Claude: incident-mode turn loop (82 assertions across 3 suites, all passing)
@@ -60,7 +59,11 @@ Release the claim when you finish.
 - [x] Investigation layer: exactly three evidence objects, observation/inference split and report choice
 - [x] Four-role 3D rescue encounter with a visible failure/collapse path
 - [x] Consequence scene reflecting the reporting choice
-- [ ] Junction 10: author/canon, code, licence, accessibility, performance and unfamiliar-player audit
+- [x] Junction 10 technical audit and visual production plan recorded (2026-09-10)
+- [ ] Junction 10 acceptance: FAILED/PENDING; see `docs/JUNCTION_10_AUDIT.md`
+- [ ] Repair J10-01–05: authoritative outcomes, anchors/effects, save restore and navigation
+- [ ] Prove one finished room, character and 60–90 second presentation sequence; see `docs/PRESENTATION_ROADMAP.md`
+- [ ] Complete author/canon, export/licence, accessibility, measured performance and unfamiliar-player acceptance
 
 ## Blocked
 
@@ -68,6 +71,9 @@ Release the claim when you finish.
   character definitions. The deliberately neutral `[PROTOTYPE]` slice remains playable.
 
 ## Done
+
+The Junctions 4–9 entries below record delivered prototype features. They do not establish
+acceptance; the independent Junction 10 findings supersede earlier quality/completion claims.
 
 - [x] Repo scaffold, LFS config, agent brief (2026-09-08)
 - [x] Route decision locked, non-goals written (2026-09-08)

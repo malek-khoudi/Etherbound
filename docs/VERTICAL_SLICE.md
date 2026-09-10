@@ -2,10 +2,13 @@
 
 Status: production brief for Junctions 0–10. This is an adaptation plan, not story canon.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
-Current gate: Junctions 0–9 complete as a non-canon vertical-slice implementation. Junction 10
-is deliberately not started. Final narrative identity and canon approval remain author gates.
+Current gate: Junction 10 technical audit performed; slice acceptance FAILED/PENDING.
+Junctions 0–9 supplied prototype implementations, but several acceptance claims were not
+supported by integration or player evidence. See `JUNCTION_10_AUDIT.md` for findings and
+`PRESENTATION_ROADMAP.md` for the proposed visual production plan. Author approval and an
+unfamiliar-player session remain pending. The audit did not implement the listed repairs.
 
 Prototype visual direction accepted through Malek's instruction to build from the supplied
 concept collection: weathered dark iron and stone, restrained brass, amber work light, cool
@@ -143,7 +146,7 @@ No open world, settlement simulation, loading-screen travel, large roster or com
 | 9. Polish | Rain/steam/dust VFX, warm/cool lighting, generated local ambience and action sounds, F5/F9 checkpoint save/load, F12 capture, quiet exploration HUD, incident UI and performance readout. Six named Godot review captures are committed. |
 
 The automated capture pass measured 90–120 FPS at 1280×720 on the Windows development PC,
-with roughly 2,620 rendered objects in the authored views. This is a local development reading,
+with roughly 2,620 total engine objects (not rendered objects or draw calls) in the authored views. This is a local development reading,
 not an unfamiliar-player or shipping-performance audit; those belong to Junction 10.
 
 ## Review loop
